@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+:root{
+    --bg-color: #191f36;
+    --snd-bg-color:#262B40;
+    --text-color:#fff;
+    --main-color:#59B2F4;
+}
+html{
+    scroll-behavior: smooth;
+    font-size:62.5%;
+}
+body{
+    background: var(--bg-color);
+    color:var(--text-color);
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header.sticky{
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+.logo{
+    font-size:2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+}
+.navbar a{
+    font-size: 1.5rem;
+    color:var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+    transition: .5s;
+}
+.navbar a:hover{
+    color: red;
+}
+.navbar a.active{
+    color: var(--main-color);
+}
+
+/* From input */
+/* User Details Form */
+.user-details-form {
+    max-width: 70rem;
+    margin: 8rem auto; /* Increased margin to push it below the navbar */
+    text-align: center;
+    padding: 2rem;
+    border-radius: .8rem;
+    background-color: var(--snd-bg-color);
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+.user-details-form h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: rgb(207, 127, 232);
+}
+
+.user-details-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-details-form form div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.user-details-form form div label {
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    margin-bottom: .5rem;
+    text-align: left;
+}
+
+.user-details-form form div input {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: rgb(99, 225, 132);
+    background: var(--snd-bg-color);
+    border-radius: .8rem;
+    border: 1px solid var(--border-color);
+    margin: .7rem 0;
+    transition: border 0.3s ease;
+}
+
+.user-details-form form div input:focus {
+    border-color: #59B2F4;
+}
+
+.user-details-form form div {
+    width: 100%;
+}
+
+.user-details-form form button {
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+    background-color: #2bb1c0;
+    color: #fff;
+    border-radius: .8rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.user-details-form form button:hover {
+    background-color: #0986e5;
+    color: #00f7ff;
+}
+
+#qrcode {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .user-details-form form div {
+        width: 100%;
+    }
+
+    .user-details-form form div input {
+        width: 100%;
+    }
+
+    .user-details-form form button {
+        width: 100%;
+    }
+}
+

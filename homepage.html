@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+
+    <link rel="stylesheet" href="homepage.css">
+</head>
+
+<body>
+    <!-- HEADER DESIGN-->
+    <header class="header">
+        <a href="#" class="logo">User Data</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <!-- <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a> -->
+        </nav>
+    </header>
+
+    <!-- User Input Form -->
+    <div class="user-details-form">
+        <h2>Enter Your Details</h2>
+        <form id="detailsForm">
+            <div>
+                <label for="userName">Username:</label>
+                <input type="text" id="userName" placeholder="Enter your name" required>
+            </div>
+            <div>
+                <label for="phoneNo">Phone Number:</label>
+                <input type="text" id="phoneNo" placeholder="Enter your phone number" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <button type="button" id="generateQR">Save and Generate QR Code</button>
+        </form>
+
+        <!-- QR Code Output -->
+        <div id="qrcode"></div>
+    </div>
+    <!-- <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form name="submit-to-google-sheet" action="#">
+            <div class="input-box">
+                <label for="userName">Username:</label>
+                <input type="text" id="userName" placeholder="Enter your name" required>
+            </div>
+            <div class="input-box">
+                <label for="phoneNo">Phone Number:</label>
+                <input type="text" id="phoneNo" placeholder="Enter your phone number" required>
+            </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="button" id="generateQR">Save and Generate QR Code</button>
+
+        </form>
+        <div id="qrcode"></div>
+    </section> -->
+    <script src="homepage.js"></script>
+</body>
+
+</html>
